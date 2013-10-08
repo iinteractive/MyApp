@@ -1,7 +1,7 @@
 MyApp
 =====
 
-Minimal demo of Catalyst best practices
+Minimal demo of [Catalyst](http://www.catalystframework.org/) best practices
 
 Create a Catalyst app
 
@@ -66,7 +66,7 @@ up any DB changes.) Neato. Let's hook it up to Catalyst:
     vi MyApp-WebApp/lib/MyApp/WebApp/Controller/Music.pm
  
  
-Use Template::Toolkit
+Use [Template::Toolkit](http://www.template-toolkit.org/)
 -----------------------
 
     MyApp-WebApp/script/myapp_webapp_create.pl View TT
