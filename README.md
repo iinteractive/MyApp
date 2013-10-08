@@ -46,9 +46,9 @@ Add a DBIx::Class Model
 
 We'll use the [DBIx::Class::Manual::Example](https://metacpan.org/module/DBIx::Class::Manual::Example) example tables.
 
-But instead of creating our Models by hand, we'll use [DBIx::Class::Schema::Loader](https://metacpan.org/module/DBIx::Class::Schema::Loader) to read our SQLite database metadata for us and create our Models on the fly.
+But instead of creating our Models by hand, we'll use [DBIx::Class::Schema::Loader->make_schema_at()](https://metacpan.org/module/DBIx::Class::Schema::Loader) to read our SQLite database metadata for us and create our Models on the fly.
 
-(Perhaps you prefer the opposite? If you want to curate your Models by hand and then have DBIx::Class create your RDBMS tables on the fly then check out [DBIx::Class::Schema->deploy()](https://metacpan.org/module/DBIx::Class::Schema#deploy).)
+(Perhaps you prefer the opposite? If you want to curate your Models by hand and then have DBIx::Class create your RDBMS tables on the fly then take a look at [DBIx::Class::Schema->deploy()](https://metacpan.org/module/DBIx::Class::Schema#deploy).)
 
     mkdir db
     vi db/music.sql
