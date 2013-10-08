@@ -24,7 +24,12 @@ Catalyst Controller.
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-    $c->response->body('Matched MyApp::WebApp::Controller::Music in Music.');
+#use Data::Dumper;
+#die Dumper($c->model('Music')->schema);
+#    my $cnt = $c->model('Music')->resultset('Cd');
+#    $c->response->body(
+#        "You have $cnt CDs"
+#    );
 }
 
 
