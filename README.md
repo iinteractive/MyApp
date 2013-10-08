@@ -50,6 +50,8 @@ But instead of creating our Models by hand, we'll use [DBIx::Class::Schema::Load
 
 (Perhaps you prefer the opposite? If you want to curate your Models by hand and then have DBIx::Class create your RDBMS tables on the fly then take a look at [DBIx::Class::Schema->deploy()](https://metacpan.org/module/DBIx::Class::Schema#deploy).)
 
+{If you prefer neither, feel free to do both sides by hand.  :) )
+
     mkdir db
     vi db/music.sql
     sqlite db/music.sqlite < db/music.sql
@@ -58,7 +60,15 @@ But instead of creating our Models by hand, we'll use [DBIx::Class::Schema::Load
     cd lib/MyApp/Schema/Music
     vi refresh_schema.pl
     perl refresh_schema.pl
-  
+
+So now we have a web-agnostic Model auto-generated from our RDBMS. 
+(Yes, you can still customize it and re-run the refresher anytime to pick
+up any DB changes.) Neato. Let's hook it up to Catalyst:
+
+    vi MyApp-WebApp/lib/MyApp/WebApp/Model/Music.pm
+    MyApp-WebApp/script/myapp_webapp_create.pl Controller Music
+    vi MyApp-WebApp/lib/MyApp/WebApp/Controller/Music.pm
+ 
  
 Use Template::Toolkit
 -----------------------
