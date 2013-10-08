@@ -18,15 +18,12 @@ Add an Independent-of-Everything Model
 
 Create it:
 
-    mkdir lib
-    mkdir lib/MyApp
-    mkdir lib/MyApp/Model
+    mkdir -p lib/MyApp/Model
     vi lib/MyApp/Model/Dog.pm
 
 Test it:
 
-    mkdir t
-    mkdir t/model
+    mkdir -p t/model
     vi t/model/Dog.t
 
 Use it inside Catalyst:
@@ -55,8 +52,7 @@ But instead of creating our Models by hand, we'll use [DBIx::Class::Schema::Load
     mkdir db
     vi db/music.sql
     sqlite db/music.sqlite < db/music.sql
-    mkdir lib/MyApp/Schema
-    mkdir lib/MyApp/Schema/Music
+    mkdir -p lib/MyApp/Schema/Music
     cd lib/MyApp/Schema/Music
     vi refresh_schema.pl
     perl refresh_schema.pl
