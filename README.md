@@ -38,7 +38,7 @@ End-to-end testing (through Catalyst):
     vi MyApp-WebApp/t/controller_Dog.t
 
 
-Add a DBIx::Class Model
+Add a [DBIx::Class](https://metacpan.org/module/DBIx::Class) Model
 -----------------------
 
 We'll use the [DBIx::Class::Manual::Example](https://metacpan.org/module/DBIx::Class::Manual::Example) example tables.
