@@ -12,8 +12,9 @@ Run it:
     MyApp-WebApp/script/myapp_webapp_server.pl
     http://0:3000/
 
-An Independent-of-Everything Model
-----------------------------------
+
+Add an Independent-of-Everything Model
+--------------------------------------
 
 Create it:
 
@@ -34,6 +35,14 @@ Use it inside Catalyst:
     MyApp-WebApp/script/myapp_webapp_create.pl Controller Dog
     vi MyApp-WebApp/lib/MyApp/WebApp/Controller/Dog.pm
     http://0.0.0.0:3000/dog/talk   # woof
+
+End-to-end testing (through Catalyst):
+
+    vi MyApp-WebApp/t/controller_Dog.t
+
+
+Add a DBIx::Class Model
+-----------------------
 
 
 
