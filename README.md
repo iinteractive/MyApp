@@ -55,7 +55,16 @@ But instead of creating our Models by hand, we'll use [DBIx::Class::Schema::Load
     sqlite db/music.sqlite < db/music.sql
     mkdir lib/MyApp/Schema
     mkdir lib/MyApp/Schema/Music
-    vi lib/MyApp/Schema/Music/refresh_schema.pl
-     
+    cd lib/MyApp/Schema/Music
+    vi refresh_schema.pl
+    perl refresh_schema.pl
+  
+ 
+Use Template::Toolkit
+-----------------------
+
+    MyApp-WebApp/script/myapp_webapp_create.pl View TT
+    vi MyApp-WebApp/root/layout.tt2
+
 
 
